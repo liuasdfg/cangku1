@@ -1,0 +1,96 @@
+1.什么是git：
+全球版本控制工具:git & svn
+远程仓库：github.com、码云 oschina--开源中国
+git 版本控制工具
+
+
+2.仓库：
+本地--仓库--自己查看
+远程--仓库--github、oschina--远程代码托管仓库--开源社区
+
+
+3.github---开源社区 www.github.com
+
+
+网易邮箱：huangx1ng123@163.com   密码：huangxing1230.
+
+c盘：user 文件夹下 删除.SSH
+
+3.5版本git基本操作
+touch xxx.txt 新建文件夹
+mkdir xxx 新建一个文件夹
+rm xxx。txt 删除txt文件
+rm -d xxx 删除一个文件夹
+
+echo "xxx">>xxx.txt 输出内容到文件
+git init --初始化一个本地仓库（本地文件夹会生成一个隐藏的.get文件夹）
+cat xxx.txt 将文件内容作为一个标准输出
+
+3.6 全局配置 git
+3.6.1 对本机进行授权： ssh-keygen -t rsa -C "huangx1ng123@163.com "
+远程github账号授权:url:github.com/login ---登录界面
+打开C盘 用户文件夹找到.SSH文件夹下找到rsa_pub文件，使用代码编辑器打开 全选复制粘贴到——>
+进入github settings -->ssh and GPG keys 选择add ssh key;
+
+配置全局用户名：git config --global user.name "huangx1ng123"
+配置邮箱：git config --global user.email "huangx1ng123@163.com "
+验证：ssh -T git@github.com
+
+
+3.7 提交到远程仓库：
+3.7.1 git界面 git init保证当前文件夹存在.git文件夹
+3.7.2 创建一个文件 或者复制文件夹到此文件夹使用：git add 或者git add --all提交当前仓库里的所有文件
+3.7.3 git commit -m "提交的注释"
+3.7.4 git remote add origin git@xxxx.xxx.git  仓库的地址
+3.7.5 git push -u origin master 推送到远程仓库
+3.7.6 以上为第一次链接远程仓库必须按步骤执行
+第二次提交：git add . 
+            git commit -m "第二次提交" 
+	    git push
+
+
+
+
+git+hexo 个人技术博客搭建
+
+第一步：新建空文件夹 进入此文件夹
+  右键：git bash here
+  执行：npm install -g hexo
+ (bash: npm is not...)--->缺失node.js https://nodejs.org/en/
+ 下载node.js lts 版本
+
+第二步：新建一个hexo 文件夹 ————>进入此文件
+右键：git bash here  
+执行：hexo init 
+
+第三步：进入hexo文件夹
+右键：git bash here 
+执行：npm install-----如果依赖环境有缺失，npm会进行检查如果没有缺失NPM会自动跳过
+
+
+第四步：当前hexo博客环境已经完成hexo会提供一个默认的模板生成静态博客文件
+执行：hexo g
+执行：hexo s
+显示：hexo is running at http://localhost:4000 press ctrl+c to stop
+
+当前博客运行在 localhost:4000
+浏览器地址栏url localhost:4000
+
+第五步：创建一篇新的博客
+hexo nwe"文章标题"
+
+第六步：如何对文章进行内容修改：
+进入 hexo suour _posts文件夹 找到对应标题的.md文档使用编辑器打开进行内容编辑
+
+第七步：查看生成内容 
+执行:hexo g 
+执行:hexo s
+
+第八步：更改hexo的主题
+github：搜索框 hexo theme--->请下载带有hexo标题的主题
+eg:hexo-theme-apollo
+
+如何下载：进入theme里面去使用git bash here 执行git clone 粘贴的地址--->github点开链接的右边 clone or dowload
+
+
+
